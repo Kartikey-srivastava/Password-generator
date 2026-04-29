@@ -1,0 +1,115 @@
+/* Full background */
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,   /* navy */
+    #000000,   /* black */
+    #064e3b,   /* dark green */
+    #7c2d12,   /* orange-brown */
+    #7f1d1d    /* dark red */
+  );
+
+  background-size: 300% 300%;
+  animation: gradientmove 8s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientmove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Main container */
+.container {
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: #1e293b; /* lighter than bg */
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+
+  transition: transform 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.03);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #f97316;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.title span {
+  margin-left: 10px; /* THIS creates the gap */
+}
+
+/* Input section */
+.inputbox {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.copybtn {
+  padding: 8px 12px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copybtn:hover {
+  background: #b91c1c;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #e5e7eb;
+}
+
+/* Range */
+.rangebox {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+}
